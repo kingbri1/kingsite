@@ -1,0 +1,101 @@
+@import "./tailwind-base.css";
+/* Custom classes here */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* animation: fadein 2s; */
+  background-color: #0f151c;
+  color: whitesmoke;
+}
+
+/*
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+*/
+
+.button-container {
+  transition-duration: 0.4s;
+}
+.button-container:hover {
+  background-color: whitesmoke;
+  color: #0e1722;
+}
+
+.arrow {
+  border: solid whitesmoke;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: 0s;
+}
+.button-container:hover .arrow {
+  border-color: #0e1722;
+}
+
+.list-button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 5px;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: whitesmoke;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.list-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.contact-button {
+  color: #f5f5f5;
+  fill: currentColor;
+  width: 3.5rem;
+  height: 3.5rem;
+  transition-duration: 0.3s;
+}
+@media (max-width: 640px) {
+  .contact-button {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  color: whitesmoke;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.spacing-s {
+  border-spacing: 0 3rem;
+}
+
+.spacing-m {
+  border-spacing: 0 5rem;
+}
+
+.filebridge-privacy p {
+  @apply text-lg lg:text-xl;
+}
+
+.pb-safe {
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+}
+
+@tailwind components;
+@tailwind utilities;
