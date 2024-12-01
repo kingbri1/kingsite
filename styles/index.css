@@ -1,21 +1,23 @@
-@import "./tailwind-base.css";
+@import './tailwind-base.css';
 /* Custom classes here */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  /* animation: fadein 2s; */
+  animation: fadein 1.25s;
   background-color: #0f151c;
   color: whitesmoke;
 }
 
-/*
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-*/
 
 .button-container {
   transition-duration: 0.4s;
