@@ -7,7 +7,6 @@ export default function About() {
       <div className="md:max-w-3xl xl:max-w-4xl rounded-xl relative bg-lightbg font-medium">
         <p className="text-whitesmoke px-6 lg:px-10 text-md lg:text-lg py-6 font-paragraph tracking-wide leading-spread">
           My name is Brian, known online as kingbri. I&apos;m a student doctor pursuing a DO degree
-          with a planned specialization in immunology. Currently, I am in pursuit of my DO degree
           with a planned specialization in immunology.
           <br />
           <br />
