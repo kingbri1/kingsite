@@ -43,14 +43,12 @@ export default function ManamiLanding() {
           <div
             className="inline-flex flex-col bg-lightbg blog-post font-paragraph
             leading-spread px-6 lg:px-10 py-6 md:max-w-3xl xl:max-w-4xl rounded-xl">
-            {/*
             <h2 className="text-blue-300">Portrait</h2>
             <img
-              src="./Asobi.png"
-              alt="The Asobi app icon"
-              className="m-auto rounded-2xl w-32 lg:w-auto h-32 lg:h-auto"
+              src="./Manami/portrait.png"
+              alt="Manami's portrait"
+              className="m-auto rounded-2xl w-5/12 h-auto"
             />
-            */}
             <h2 className="text-blue-300">Demographics</h2>
             <CardDescriptor title="Age" text="21 years old" />
             <CardDescriptor title="Birthday" text="December 24th" />
