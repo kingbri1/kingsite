@@ -22,13 +22,19 @@ export default function ManamiLanding() {
     <>
       <Head>
         <link rel="icon" type="image/svg" href="/favicon.svg" />
-        <meta property="og:title" content="Manami's Bio" />
+        <meta property="og:title" content="Manami Starling" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://kingbri.dev/manami" />
-        <meta property="og:description" content="Hi, I'm Manami Starling!" />
-        <meta name="Description" content="Hi, I'm Manami Starling!" />
-        <meta property="og:image" content="/favicon.svg" />
-        <meta name="theme-color" content="#ffd700" />
+        <meta
+          property="og:description"
+          content="Hi! I'm Manami, a quantum physics student and robotics expert from the year 2077."
+        />
+        <meta
+          name="Description"
+          content="Hi! I'm Manami, a quantum physics student and robotics expert from the year 2077."
+        />
+        <meta property="og:image" content="/Manami/portrait.png" />
+        <meta name="theme-color" content="#88a2fa" />
         <title>Manami Starling</title>
       </Head>
       <article className="text-whitesmoke">
