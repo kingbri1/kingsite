@@ -1,8 +1,11 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { DiscordButton, GithubButton } from '@/components/index/socials';
 import { Separator } from '@/components/utils/misc';
+import asobiLogo from '@/public/Asobi.png';
+import downloadAppStoreLogo from '@/public/DownloadAppStore.svg';
 
 export default function FileBridgeLanding() {
   return (
@@ -27,8 +30,8 @@ export default function FileBridgeLanding() {
         </div>
         <div className="flex-col text-center">
           <div className="p-5 lg:p-0">
-            <img
-              src="./Asobi.png"
+            <Image
+              src={asobiLogo}
               alt="The Asobi app icon"
               className="m-auto rounded-2xl w-32 lg:w-auto h-32 lg:h-auto"
             />
@@ -46,10 +49,10 @@ export default function FileBridgeLanding() {
             href="https://apps.apple.com/us/app/asobi/id1589812837"
             target="_blank"
             rel="noreferrer noopener">
-            <img
-              src="./DownloadAppStore.svg"
+            <Image
+              src={downloadAppStoreLogo}
               alt="Download on the app store"
-              className="h-12 lg:h-16"
+              className="h-12 lg:h-16 w-screen"
             />
           </a>
           <button className="border-solid border-2 mt-8 text-lg border-white p-2 rounded-md cursor-pointer hover:bg-white hover:text-black duration-200">

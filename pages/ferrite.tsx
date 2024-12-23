@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { DiscordButton, GithubButton } from '@/components/index/socials';
 import { Separator } from '@/components/utils/misc';
+import ferriteLogo from '@/public/Ferrite.png';
 
 export default function FerriteLanding() {
   return (
@@ -30,8 +32,8 @@ export default function FerriteLanding() {
         </div>
         <div className="flex-col text-center">
           <div className="p-5 lg:p-0">
-            <img
-              src="./Ferrite.png"
+            <Image
+              src={ferriteLogo}
               alt="The Ferrite app icon"
               className="m-auto rounded-2xl w-32 lg:w-auto h-32 lg:h-auto"
             />

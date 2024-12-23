@@ -1,5 +1,7 @@
 import { Separator } from '@/components/utils/misc';
 import Head from 'next/head';
+import manamiPortrait from '@/public/Manami/portrait.png';
+import Image from 'next/image';
 
 interface Props {
   title: string;
@@ -44,8 +46,8 @@ export default function ManamiLanding() {
             className="inline-flex flex-col bg-lightbg blog-post font-paragraph
             leading-spread px-6 lg:px-10 py-6 md:max-w-3xl xl:max-w-4xl rounded-xl">
             <h2 className="text-blue-300">Portrait</h2>
-            <img
-              src="./Manami/portrait.png"
+            <Image
+              src={manamiPortrait}
               alt="Manami's portrait"
               className="m-auto rounded-2xl w-5/12 h-auto"
             />

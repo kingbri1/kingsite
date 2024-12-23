@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Image from 'next/image';
+
 import { useRouter } from 'next/router';
+import crownLogo from '@/public/favicon.svg';
 
 interface Props {
   name: string;
@@ -61,10 +64,10 @@ export default function Nav() {
         <NavElement name="My Work" altName="Work" url="/#work" />
         <li id="navHome" className="hidden md:inline-block">
           <Link href="/">
-            <img
-              src="/favicon.svg"
-              width="65px"
-              height="65px"
+            <Image
+              src={crownLogo}
+              width={65}
+              height={65}
               className="mx-auto cursor-pointer"
               alt=""
             />
