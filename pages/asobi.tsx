@@ -16,10 +16,7 @@ export default function FileBridgeLanding() {
         <meta property="og:url" content="https://kingbri.dev/asobi" />
         <meta property="og:description" content="An immersive browser for iOS, iPadOS, and Macs" />
         <meta name="Description" content="An immersive browser for iOS, iPadOS, and Macs" />
-        <meta
-          property="og:image"
-          content="https://avatars1.githubusercontent.com/u/8082010?s=460&u=6f29bfc7183955182abe0625dc1cc8054db0f2b9&v=4"
-        />
+        <meta property="og:image" content="https://kingbri.dev/Asobi.png" />
         <meta name="theme-color" content="#468fcc" />
         <link rel="icon" type="image/png" href="/Asobi.png" />
         <title>Asobi | Home</title>

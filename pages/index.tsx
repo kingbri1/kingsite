@@ -22,7 +22,7 @@ export default function IndexPage() {
           name="Description"
           content="My name's Brian. This is my website. I make a lot of cool things. Come take a look!"
         />
-        <meta property="og:image" content="/favicon.svg" />
+        <meta property="og:image" content="https://kingbri.dev/kingbriLogo.png" />
         <meta name="theme-color" content="#ffd700" />
         <title>kingbri</title>
       </Head>

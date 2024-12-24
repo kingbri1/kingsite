@@ -18,10 +18,7 @@ export default function FerriteLanding() {
           content="An app that makes torrent searching easier on iOS"
         />
         <meta name="Description" content="An app that makes torrent searching easier on iOS" />
-        <meta
-          property="og:image"
-          content="https://avatars1.githubusercontent.com/u/8082010?s=460&u=6f29bfc7183955182abe0625dc1cc8054db0f2b9&v=4"
-        />
+        <meta property="og:image" content="https://kingbri.dev/Ferrite.png" />
         <meta name="theme-color" content="#d47355" />
         <link rel="icon" type="image/png" href="/Ferrite.png" />
         <title>Ferrite | Home</title>
