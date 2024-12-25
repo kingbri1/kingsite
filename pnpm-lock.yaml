@@ -61,7 +61,7 @@ importers:
         specifier: ^18.0.26
         version: 18.3.12
       '@types/react-anchor-link-smooth-scroll':
-        specifier: ^1.0.2
+        specifier: ^1.0.5
         version: 1.0.5
       '@types/react-syntax-highlighter':
         specifier: ^15.5.5
