@@ -1,14 +1,16 @@
-import { Separator } from '@/components/utils/misc';
 import Head from 'next/head';
-import manamiPortrait from '@/public/Manami/portrait.png';
 import Image from 'next/image';
+import ManamiGallery from '@/components/manami/gallery';
+import { GalleryImage, getImagesFromFolder } from '@/components/utils/images';
+import { Separator } from '@/components/utils/misc';
+import manamiPortrait from '@/public/Manami/portrait.png';
 
-interface Props {
+interface CardProps {
   title: string;
   text: string;
 }
 
-function CardDescriptor({ title, text }: Props) {
+function CardDescriptor({ title, text }: CardProps) {
   return (
     <p>
       <span className="text-indigo-300 font-semibold">{title}: </span>
@@ -17,7 +19,21 @@ function CardDescriptor({ title, text }: Props) {
   );
 }
 
-export default function ManamiLanding() {
+interface Props {
+  images: GalleryImage[];
+}
+
+export async function getStaticProps() {
+  const images = getImagesFromFolder('Manami/Art');
+
+  return {
+    props: {
+      images
+    }
+  };
+}
+
+export default function ManamiLanding({ images }: Props) {
   return (
     <>
       <Head>
@@ -107,6 +123,7 @@ export default function ManamiLanding() {
               air and contains amenities such as a jogging trail, sport courts, and a picnic area
               with a central fountain."
             />
+            <ManamiGallery images={images} />
           </div>
         </div>
         <div className="md:hidden">

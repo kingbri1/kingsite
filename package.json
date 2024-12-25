@@ -8,16 +8,21 @@
     "export": "next export"
   },
   "dependencies": {
+    "@types/probe-image-size": "^7.2.5",
+    "exifreader": "^4.25.0",
     "gray-matter": "^4.0.3",
     "groq": "^2.0.9",
     "next": "^15.0.3",
+    "probe-image-size": "^7.2.3",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-bootstrap-icons": "^1.11.4",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.4",
+    "react-photo-album": "^3.0.2",
     "react-syntax-highlighter": "^15.5.0",
-    "with-tailwindcss": "link:"
+    "with-tailwindcss": "link:",
+    "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
