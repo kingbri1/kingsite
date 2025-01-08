@@ -7,15 +7,15 @@ export interface GalleryImage {
   src: string;
   width: number;
   height: number;
-  title?: string;
-  artist?: GalleryArtistInfo;
+  title: string | null;
+  artist: GalleryArtistInfo | null;
 }
 
 export interface GalleryArtistInfo {
   title: string;
   artist: string;
   socialMedia: string;
-  socialLink?: string;
+  socialLink: string | null;
 }
 
 export function getImagesFromFolder(folderPath: string) {
@@ -42,8 +42,8 @@ export function getImagesFromFolder(folderPath: string) {
       src: `/${folderPath}/${file}`,
       width: dimensions?.width || 1,
       height: dimensions?.height || 1,
-      title: artistInfo?.title,
-      artist: artistInfo
+      title: artistInfo?.title ?? null,
+      artist: artistInfo ?? null
     };
   });
 

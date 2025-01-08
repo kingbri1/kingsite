@@ -31,7 +31,12 @@ export default function ManamiPhotoAlbum({ images, onPhotoClick }: Props) {
       <ColumnsPhotoAlbum
         columns={(containerWidth) => (containerWidth < 640 ? 1 : 2)}
         photos={images.map((image): Photo => {
-          return { src: image.src, width: image.width, height: image.height, alt: image.title };
+          return {
+            src: image.src,
+            width: image.width,
+            height: image.height,
+            alt: image.title || undefined
+          };
         })}
         render={{
           image: renderNextjsImage
