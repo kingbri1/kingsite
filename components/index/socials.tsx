@@ -35,7 +35,7 @@ export function MailButton() {
 
 export function GithubButton() {
   return (
-    <SocialButton name="github" url="https://github.com/bdashore3">
+    <SocialButton name="github" url="https://github.com/kingbri1">
       <Github className="contact-button hover:text-orange-400" />
     </SocialButton>
   );
