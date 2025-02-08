@@ -67,7 +67,7 @@ export function MediumBlogButton() {
 
 export function TwitchButton() {
   return (
-    <SocialButton name="twitch" url="https://twitch.tv/kingbrigames">
+    <SocialButton name="twitch" url="https://twitch.tv/kingbri1st">
       <Twitch className="contact-button hover:text-purple-600" />
     </SocialButton>
   );
