@@ -73,6 +73,11 @@ export default function ManamiLanding({ images }: Props) {
               alt="Manami's portrait"
               className="m-auto rounded-2xl w-5/12 h-auto"
             />
+            <h2 className="text-blue-300">Overview</h2>
+            <p>
+              Manami is a quantum physics student and robotics expert in the year 2077, dedicated to
+              study the secrets of the universe.
+            </p>
             <h2 className="text-blue-300">Demographics</h2>
             <CardDescriptor title="Age" text="21 years old" />
             <CardDescriptor title="Birthday" text="December 24th" />
