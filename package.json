@@ -12,7 +12,7 @@
     "exifreader": "^4.25.0",
     "gray-matter": "^4.0.3",
     "groq": "^2.0.9",
-    "next": "^15.1",
+    "next": "^15.5",
     "probe-image-size": "^7.2.3",
     "react": "^19",
     "react-anchor-link-smooth-scroll": "^1.0.12",
