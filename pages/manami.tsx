@@ -93,6 +93,15 @@ export default function ManamiLanding({ images }: Props) {
                 <YoutubeButton />
               </ul>
             </div>
+            <h2 className="text-blue-300">Content</h2>
+            <CardDescriptor
+              title="Streaming schedule"
+              text="Fridays or Saturdays @ 9PM EST on Twitch"
+            />
+            <CardDescriptor
+              title="Content categories"
+              text="Development, Articles, Medical education, Games, Collabs"
+            />
             <h2 className="text-blue-300">Demographics</h2>
             <CardDescriptor title="Age" text="21 years old" />
             <CardDescriptor title="Birthday" text="December 24th" />
