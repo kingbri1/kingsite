@@ -4,6 +4,12 @@ import ManamiGallery from '@/components/manami/gallery';
 import { GalleryImage, getImagesFromFolder } from '@/components/utils/images';
 import { Separator } from '@/components/utils/misc';
 import manamiPortrait from '@/public/Manami/portrait.png';
+import {
+  DiscordButton,
+  TwitchButton,
+  TwitterButton,
+  YoutubeButton
+} from '@/components/index/socials';
 
 interface CardProps {
   title: string;
@@ -71,13 +77,22 @@ export default function ManamiLanding({ images }: Props) {
             <Image
               src={manamiPortrait}
               alt="Manami's portrait"
-              className="m-auto rounded-2xl w-5/12 h-auto"
+              className="m-auto rounded-2xl w-1/3 h-auto"
             />
             <h2 className="text-blue-300">Overview</h2>
             <p>
               Manami is a quantum physics student and robotics expert in the year 2077, dedicated to
               study the secrets of the universe.
             </p>
+            <h2 className="text-blue-300">Socials</h2>
+            <div className="flex p-4 justify-center">
+              <ul className="inline-flex items-center">
+                <TwitterButton />
+                <DiscordButton />
+                <TwitchButton />
+                <YoutubeButton />
+              </ul>
+            </div>
             <h2 className="text-blue-300">Demographics</h2>
             <CardDescriptor title="Age" text="21 years old" />
             <CardDescriptor title="Birthday" text="December 24th" />

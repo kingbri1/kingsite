@@ -47,12 +47,6 @@
   .blog-post blockquote {
     @apply not-last:mb-4 not-first:mt-4;
   }
-  .blog-post ol {
-    @apply list-decimal my-1 pl-10;
-  }
-  .blog-post ul {
-    @apply list-disc my-1 pl-10;
-  }
   .blog-post blockquote {
     @apply ml-5 pl-2 border-l-2 border-gray-400 border-solid;
   }
