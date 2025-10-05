@@ -22,5 +22,13 @@ module.exports = {
         permanent: true
       }
     ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/Manami',
+        destination: '/manami'
+      }
+    ];
   }
 };
