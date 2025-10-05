@@ -42,6 +42,11 @@ export default function Work() {
           url="https://github.com/theroyallab/tabbyAPI"
         />
         <WorkCard
+          name="YALS"
+          description="TabbyAPI's sister project. OAI compatible friendly local LLM server built with Deno and the llama.cpp library."
+          url="https://github.com/theroyallab/YALS"
+        />
+        <WorkCard
           name="Ferrite"
           description="A torrent searcher and debrid streamer for iOS. Available on TestFlight."
           url="/ferrite"
@@ -59,12 +64,7 @@ export default function Work() {
         <WorkCard
           name="RoyalGuard"
           description="Makes your discord administration experience simple and easy."
-          url="https://github.com/bdashore3/RoyalGuard"
-        />
-        <WorkCard
-          name="CourtJester"
-          description="A multipurpose bot which enhances your discord server experience."
-          url="https://github.com/bdashore3/CourtJester"
+          url="https://github.com/kingbri1/RoyalGuard"
         />
       </div>
     </div>
