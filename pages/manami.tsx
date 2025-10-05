@@ -71,7 +71,7 @@ export default function ManamiLanding({ images }: Props) {
             Manami Starling
           </h1>
           <div
-            className="inline-flex flex-col bg-lightbg blog-post font-paragraph
+            className="inline-flex flex-col bg-lightbg prose font-paragraph
             leading-spread px-6 lg:px-10 py-6 md:max-w-3xl xl:max-w-4xl rounded-xl">
             <h2 className="text-blue-300">Portrait</h2>
             <Image
@@ -79,11 +79,6 @@ export default function ManamiLanding({ images }: Props) {
               alt="Manami's portrait"
               className="m-auto rounded-2xl w-1/3 h-auto"
             />
-            <h2 className="text-blue-300">Overview</h2>
-            <p>
-              Manami is a quantum physics student and robotics expert in the year 2077, dedicated to
-              study the secrets of the universe.
-            </p>
             <h2 className="text-blue-300">Socials</h2>
             <div className="flex p-4 justify-center">
               <ul className="inline-flex items-center">
@@ -93,6 +88,11 @@ export default function ManamiLanding({ images }: Props) {
                 <YoutubeButton />
               </ul>
             </div>
+            <h2 className="text-blue-300">Overview</h2>
+            <p>
+              Manami is a quantum physics student and robotics expert in the year 2077, dedicated to
+              study the secrets of the universe.
+            </p>
             <h2 className="text-blue-300">Content</h2>
             <CardDescriptor
               title="Streaming schedule"

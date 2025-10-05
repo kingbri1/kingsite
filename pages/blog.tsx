@@ -25,7 +25,7 @@ export default function Blog() {
       <div className="flex-col relative justify-center flex min-h-screen items-center tracking-wide">
         <div className="inline-flex flex-col text-center items-center">
           <h1 className="text-6xl lg:text-7xl text-yellow-300 font-header text-center p-6">Blog</h1>
-          <h2 className="text-whitesmoke text-center text-2xl md:text-3xl font-header p-3 blog-post">
+          <h2 className="text-whitesmoke text-center text-2xl md:text-3xl font-header p-3 prose">
             This page is under construction
           </h2>
           <p className="text-whitesmoke px-6 lg:px-10 text-md lg:text-lg py-6 font-paragraph tracking-wide leading-spread">

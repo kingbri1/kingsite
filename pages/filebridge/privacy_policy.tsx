@@ -18,7 +18,7 @@ export default function FileBridgePrivacyPolicy() {
           <h1 className="font-header text-center text-4xl md:text-5xl lg:text-7xl text-yellow-300 p-8">
             Privacy Policy
           </h1>
-          <div className="inline-flex flex-col bg-lightbg blog-post font-paragraph leading-spread px-6 lg:px-10 py-6 md:max-w-3xl xl:max-w-4xl rounded-xl">
+          <div className="inline-flex flex-col bg-lightbg prose font-paragraph leading-spread px-6 lg:px-10 py-6 md:max-w-3xl xl:max-w-4xl rounded-xl">
             <p>This is the privacy policy for the FileBridge iOS/iPad OS application.</p>
             <h2>In short</h2>
             <p>FileBridge and the developer (kingbri) do not collect your data. Period.</p>
