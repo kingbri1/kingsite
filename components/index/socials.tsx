@@ -28,7 +28,7 @@ export function SocialButton(props: Props) {
 
 export function MailButton() {
   return (
-    <SocialButton name="email" url="mailto:bdashore3@gmail.com">
+    <SocialButton name="email" url="mailto:kingbrigames@gmail.com">
       <EnvelopeFill className="contact-button hover:text-green-400" />
     </SocialButton>
   );
