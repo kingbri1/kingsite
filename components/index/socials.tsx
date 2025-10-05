@@ -3,6 +3,7 @@ import {
   EnvelopeFill,
   Github,
   Medium,
+  Tiktok,
   Twitch,
   Twitter,
   Youtube
@@ -81,6 +82,14 @@ export function YoutubeButton() {
   );
 }
 
+export function TiktokButton() {
+  return (
+    <SocialButton name="tiktok" url="https://tiktok.com/@kingbri1st">
+      <Tiktok className="contact-button hover:text-fuchsia-500" />
+    </SocialButton>
+  );
+}
+
 export default function Socials() {
   return (
     <footer id="socials" className="flex justify-center p-8">
@@ -91,11 +100,12 @@ export default function Socials() {
         <ul className="py-10 flex items-center">
           <MailButton />
           <GithubButton />
+          <TwitchButton />
+          <YoutubeButton />
+          <TiktokButton />
           <TwitterButton />
           <DiscordButton />
           <MediumBlogButton />
-          <TwitchButton />
-          <YoutubeButton />
         </ul>
       </div>
     </footer>

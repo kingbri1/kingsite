@@ -6,6 +6,7 @@ import { Separator } from '@/components/utils/misc';
 import manamiPortrait from '@/public/Manami/portrait.png';
 import {
   DiscordButton,
+  TiktokButton,
   TwitchButton,
   TwitterButton,
   YoutubeButton
@@ -82,10 +83,11 @@ export default function ManamiLanding({ images }: Props) {
             <h2 className="text-blue-300">Socials</h2>
             <div className="flex p-4 justify-center">
               <ul className="inline-flex items-center">
-                <TwitterButton />
-                <DiscordButton />
                 <TwitchButton />
                 <YoutubeButton />
+                <TiktokButton />
+                <TwitterButton />
+                <DiscordButton />
               </ul>
             </div>
             <h2 className="text-blue-300">Overview</h2>
