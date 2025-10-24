@@ -1,0 +1,19 @@
+---
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import Nav from "@/components/nav/nav.astro"
+import "@/styles/index.css"
+---
+
+<html lang="en">
+  <head>
+    <slot name="head" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Nav />
+    <slot />
+  </body>
+</html>

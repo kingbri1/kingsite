@@ -1,0 +1,62 @@
+---
+const projects = [
+  {
+    name: "TabbyAPI",
+    description:
+      "A friendly local LLM server that follows the OpenAI API standard and uses the ExllamaV2 library.",
+    url: "https://github.com/theroyallab/tabbyAPI"
+  },
+  {
+    name: "YALS",
+    description:
+      "TabbyAPI's sister project. OAI compatible friendly local LLM server built with Deno and the llama.cpp library.",
+    url: "https://github.com/theroyallab/YALS"
+  },
+  {
+    name: "Ferrite",
+    description: "A torrent searcher and debrid streamer for iOS. Available on TestFlight.",
+    url: "/ferrite"
+  },
+  {
+    name: "Asobi",
+    description: "An immersive web browser for iOS, iPadOS,and MacOS. Available on the App Store.",
+    url: "/asobi"
+  },
+  {
+    name: "FileBridge",
+    description:
+      "An iOS application which bridges the gap between your iDevice and iTunes. Available on the App Store.",
+    url: "/filebridge"
+  },
+  {
+    name: "RoyalGuard",
+    description: "Makes your discord administration experience simple and easy.",
+    url: "https://github.com/kingbri1/RoyalGuard"
+  }
+]
+---
+
+<div class="flex flex-col min-h-screen grow overflow-visible">
+  <h1 class="text-yellow-300 text-center text-4xl md:text-5xl lg:text-6xl leading-normal lg:leading-relaxed font-header font-semibold tracking-wide p-3">
+    My Work
+  </h1>
+  <div class="inline-flex flex-row flex-wrap justify-center">
+    {projects.map(({ name, description, url }) => (
+      <div class="work-card bg-lightbg p-5 m-8 max-w-75v min-h-30v md:max-w-40v md:min-h-25v lg:max-w-25v lg:min-h-35v lg:max-h-45v">
+        <h2 class="relative underline text-2xl lg:text-3xl">{name}</h2>
+        <p class="relative inline-flex grow align-center text-md mt-4 mb-4 lg:text-xl font-paragraph">
+          {description}
+        </p>
+        <div class="inline-flex bottom-4">
+          <a
+            href={url}
+            target="_blank"
+            rel="noreferrer noopener"
+            class="text-md lg:text-lg rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border-solid border-2 border-whitesmoke hover:text-black hover:bg-whitesmoke">
+            {url.startsWith("https://github.com") ? "View source code" : "View source"}
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

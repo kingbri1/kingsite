@@ -1,0 +1,9 @@
+---
+interface Props {
+  id?: string;
+};
+
+const { id } = Astro.props
+---
+
+<div id={id || ''} class="h-10 md:h-16 lg:h-24" />;

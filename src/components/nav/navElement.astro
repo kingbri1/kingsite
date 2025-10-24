@@ -1,0 +1,31 @@
+---
+/*
+  Function for a basic navigation bar element
+  Uses AnchorLinks for on-site pages when on the index page
+*/
+
+interface Props {
+  name: string;
+  altName?: string;
+  url: string;
+}
+
+const {
+    name,
+    altName,
+    url
+} = Astro.props;
+---
+
+<li>
+  <a href={url} class="focus:outline-none relative text-whitesmoke list-button font-navigation text-center text-xl lg:text-2xl tracking-wide">
+    {altName ? (
+        <>
+        <span class="hidden md:inline-block">{name}</span>
+        <span class="md:hidden">{altName}</span>
+        </>
+    ) : (
+        <span class="inline-block">{name}</span>
+    )}
+  </a>
+</li>

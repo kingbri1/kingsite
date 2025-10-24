@@ -26,6 +26,9 @@ dependencies:
   astro:
     specifier: ^5.14.6
     version: 5.14.6(typescript@5.9.3)
+  bootstrap-icons:
+    specifier: ^1.13.1
+    version: 1.13.1
   canvas-confetti:
     specifier: ^1.9.3
     version: 1.9.3
@@ -1589,6 +1592,10 @@ packages:
   /baseline-browser-mapping@2.8.17:
     resolution: {integrity: sha512-j5zJcx6golJYTG6c05LUZ3Z8Gi+M62zRT/ycz4Xq4iCOdpcxwg7ngEYD4KA0eWZC7U17qh/Smq8bYbACJ0ipBA==}
     hasBin: true
+    dev: false
+
+  /bootstrap-icons@1.13.1:
+    resolution: {integrity: sha512-ijombt4v6bv5CLeXvRWKy7CuM3TRTuPEuGaGKvTV5cz65rQSY8RQ2JcHt6b90cBBAC7s8fsf2EkQDldzCoXUjw==}
     dev: false
 
   /boxen@8.0.1:

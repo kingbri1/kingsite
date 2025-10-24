@@ -1,0 +1,72 @@
+@import 'tailwindcss/theme' layer(theme);
+@import 'tailwindcss/preflight' layer(base);
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer base {
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply self-center leading-none;
+  }
+  .prose h1,
+  .prose h2,
+  .prose h3 {
+    @apply border-b-2 border-solid border-whitesmoke font-bold;
+  }
+  .prose h1 {
+    @apply text-2xl lg:text-4xl;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+  }
+  .prose h2 {
+    @apply text-xl lg:text-3xl;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+  }
+  .prose h3 {
+    @apply text-lg lg:text-2xl;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .prose h4 {
+    @apply text-base lg:text-xl;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+  }
+  .prose h5 {
+    @apply text-base lg:text-lg;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+  }
+  .prose h6 {
+    @apply text-base lg:text-lg;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+  }
+  .prose p {
+    @apply not-last:mb-4 not-first:mt-4;
+  }
+  .prose a {
+    @apply underline text-blue-300 visited:text-purple-400;
+  }
+}
