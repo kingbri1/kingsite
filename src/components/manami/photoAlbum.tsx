@@ -1,29 +1,30 @@
-import Image from 'next/image';
-import { ColumnsPhotoAlbum, Photo, RenderImageContext, RenderImageProps } from 'react-photo-album';
+import { Image } from 'astro:assets';
+import type { Photo, RenderImageContext, RenderImageProps } from 'react-photo-album';
+import { ColumnsPhotoAlbum } from 'react-photo-album';
 import 'react-photo-album/columns.css';
 
-import { GalleryImage } from '../utils/images';
+import { type GalleryImage } from '../utils/clientImages';
 
 interface Props {
   images: GalleryImage[];
   onPhotoClick: (index: number) => void;
 }
 
-function renderNextjsImage(
-  { alt, title, sizes }: RenderImageProps,
-  { photo, width, height }: RenderImageContext
-) {
-  return (
-    <Image
-      src={photo.src}
-      alt={alt || 'Gallery Post'}
-      width={width || photo.width}
-      height={height || photo.height}
-      title={title}
-      sizes={sizes}
-    />
-  );
-}
+// function renderNextjsImage(
+//   { alt, title, sizes }: RenderImageProps,
+//   { photo, width, height }: RenderImageContext
+// ) {
+//   return (
+//     <img
+//       src={photo.src}
+//       alt={alt || 'Gallery Post'}
+//       width={width || photo.width}
+//       height={height || photo.height}
+//       title={title}
+//       sizes={sizes}
+//     />
+//   );
+// }
 
 export default function ManamiPhotoAlbum({ images, onPhotoClick }: Props) {
   return (
@@ -38,9 +39,6 @@ export default function ManamiPhotoAlbum({ images, onPhotoClick }: Props) {
             alt: image.title || undefined
           };
         })}
-        render={{
-          image: renderNextjsImage
-        }}
         onClick={({ index }) => onPhotoClick(index)}
       />
     </div>

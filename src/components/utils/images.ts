@@ -1,31 +1,20 @@
 import ExifReader from 'exifreader';
 import fs from 'fs';
-import path from 'path';
-import probe from 'probe-image-size';
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import type { GalleryArtistInfo, GalleryImage } from './clientImages';
 
-export interface GalleryImage {
-  src: string;
-  width: number;
-  height: number;
-  title: string | null;
-  artist: GalleryArtistInfo | null;
-}
+export async function getImagesFromAssets(folderPath: string) {
+  const assets = import.meta.glob<ImageMetadata>("/src/assets/**/*", { eager: true, import: "default" });
 
-export interface GalleryArtistInfo {
-  title: string;
-  artist: string;
-  socialMedia: string;
-  socialLink: string | null;
-}
+  // This doesn't look too optimized, maybe make a collections enum or separate functions instead
+  const imageModules = Object.entries(assets).filter(([filePath]) => 
+    filePath.includes(`/src/assets/${folderPath}/`)
+  );
 
-export function getImagesFromFolder(folderPath: string) {
-  const directory = path.join(process.cwd(), 'public', folderPath);
-  const files = fs.readdirSync(directory);
-
-  const images = files.map((file): GalleryImage => {
-    const filePath = path.join(directory, file);
-    const fileBuffer = fs.readFileSync(filePath);
-    const dimensions = probe.sync(fileBuffer);
+  const imagePromises = imageModules.map(async ([filePath, imageModule]) => {
+    const relPath = filePath.replace(/^\//, '');
+    const fileBuffer = fs.readFileSync(relPath);
     const metadata = ExifReader.load(fileBuffer);
 
     let artistInfo: GalleryArtistInfo | undefined;
@@ -38,14 +27,19 @@ export function getImagesFromFolder(folderPath: string) {
       }
     }
 
+    const imageResult = await getImage({
+      src: imageModule,
+      format: "png",
+    });
+
     return {
-      src: `/${folderPath}/${file}`,
-      width: dimensions?.width || 1,
-      height: dimensions?.height || 1,
+      src: imageResult.src,
+      width: imageModule.width,
+      height: imageModule.height,
       title: artistInfo?.title ?? null,
       artist: artistInfo ?? null
     };
   });
 
-  return images;
+  return await Promise.all(imagePromises);
 }

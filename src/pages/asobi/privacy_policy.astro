@@ -1,0 +1,51 @@
+---
+import Separator from '@/components/utils/separator.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+---
+
+<MainLayout>
+  <Fragment>
+    <link rel="icon" type="image/png" href="/Asobi.png" />
+    <title>Asobi | Privacy Policy</title>
+  </Fragment>
+  <article class="text-whitesmoke">
+    <div class="hidden md:block">
+      <Separator />
+    </div>
+    <div class="flex flex-col items-center filebridge-privacy">
+      <h1 class="font-header text-center text-4xl md:text-5xl lg:text-7xl text-yellow-300 p-8">
+        Privacy Policy
+      </h1>
+      <div class="inline-flex flex-col bg-lightbg prose font-paragraph leading-spread px-6 lg:px-10 py-6 md:max-w-3xl xl:max-w-4xl rounded-xl">
+        <p>This is the privacy policy for the Asobi iOS/iPad OS/MacOS application.</p>
+        <h2>In short</h2>
+        <p>Asobi and the developer (kingbri) do not collect your data. Period.</p>
+        <h2>Why?</h2>
+        <p>
+          Asobi is a browser which does not collect any data from you. All of your data is your
+          own and the developer (kingbri) or any other parties cannot see any data you store.
+          <br />
+          <br />
+          Due to the app being free and open source (FOSS), you can view&nbsp;
+          <a href="https://github.com/kingbri1/Asobi">the code</a>
+          &nbsp;and see that the app physically cannot collect your data.{' '}
+        </p>
+        <h2>Does this comply with COPPA?</h2>
+        <p>
+          Yes, Asobi does comply with the Children&apos;s Online Privacy Protection Act.
+          Personal information is not collected from anyone which includes individuals under the
+          age of 13.
+        </p>
+        <h3>Contact the developer</h3>
+        <p>
+          If you have any questions with this Privacy Policy, please contact me using any of the
+          methods from{' '}
+          <a href="https://kingbri.dev/socials">https://kingbri.dev/socials</a>
+        </p>
+      </div>
+    </div>
+    <div class="md:hidden">
+      <Separator />
+    </div>
+  </article>
+</MainLayout>

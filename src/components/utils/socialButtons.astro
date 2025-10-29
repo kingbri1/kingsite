@@ -1,0 +1,26 @@
+---
+import type { SocialName } from './socialUtils';
+import { SOCIAL_ITEMS } from './socialUtils';
+
+interface Props {
+  include?: readonly SocialName[];
+}
+
+const { include = [] } = Astro.props;
+const socialNames = include.length > 0 ? include : Array.from(SOCIAL_ITEMS.keys())
+---
+
+{socialNames.map((name) => {
+  const social = SOCIAL_ITEMS.get(name);
+  if (!social) {
+    return null;
+  }
+
+  return (
+    <li class="px-1 md:px-2">
+      <a href={social.url} aria-label={name} target="_blank" rel="noreferrer noopener">
+        <i class={`${social.icon} text-4xl md:text-6xl text-whitesmoke ${social.hoverClass} duration-300`} />
+      </a>
+    </li>
+  );
+})}

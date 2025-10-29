@@ -1,64 +1,61 @@
 ---
-import { DiscordButton, GithubButton } from '@/components/index/socials.astro';
+import ferriteIcon from "@public/Ferrite.png";
 import Separator from '@/components/utils/separator.astro';
+import SocialButtons from '@/components/utils/socialButtons.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
+import { Image } from "astro:assets";
 ---
 
 <MainLayout>
-  <Fragment>
-    <head slot="header">
-      <meta property="og:title" content="Ferrite" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://kingbri.dev/ferrite" />
-      <meta
-        property="og:description"
-        content="An app that makes torrent searching easier on iOS"
-      />
-      <meta name="Description" content="An app that makes torrent searching easier on iOS" />
-      <meta property="og:image" content="https://kingbri.dev/Ferrite.png" />
-      <meta name="theme-color" content="#d47355" />
-      <link rel="icon" type="image/png" href="/Ferrite.png" />
-      <title>Ferrite | Home</title>
-    </head>
-    <div class="flex-col relative justify-center flex min-h-screen items-center tracking-wide">
-      <div class="hidden md:block">
-        <Separator />
-      </div>
-      <div class="flex-col text-center">
-        <div class="p-5 lg:p-0">
-          <img
-            src="/Ferrite.png"
-            alt="The Ferrite app icon"
-            class="m-auto rounded-2xl w-32 lg:w-auto h-32 lg:h-auto"
-          />
-        </div>
-
-        <p class="text-whitesmoke font-header text-4xl lg:text-6xl lg:leading-relaxed font-bold tracking-wide">
-          Ferrite
-        </p>
-        <p class="mt-4 font-paragraph text-whitesmoke text-lg lg:text-2xl px-3 lg:px-0">
-          A media searcher and debrid manager for iOS.
-        </p>
-      </div>
-      <div class="mt-8 lg:mt-12 mb-16 inline-flex flex-col justify-center items-center">
-        <a href="https://github.com/kingbri1/Ferrite/releases" target="_blank" rel="noreferrer">
-          <button class="text-lg lg:text-xl rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border-solid border-2 border-whitesmoke hover:text-black hover:bg-whitesmoke">
-            Download
-          </button>
-        </a>
-        <ul class="mt-12 lg:mt-8 flex items-center">
-          <!-- <GithubButton />
-          <DiscordButton /> -->
-        </ul>
-      </div>
-      <footer class="text-center max-w-screen">
-        &#169; 2024-present kingbri |&nbsp;
-        <span>
-          <a href="ferrite/privacy_policy" class="text-blue-300 underline">
-            Privacy Policy
-          </a>
-        </span>
-      </footer>
-    </div>
+  <Fragment slot="header">
+    <meta property="og:title" content="Ferrite" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kingbri.dev/ferrite" />
+    <meta
+      property="og:description"
+      content="An app that makes torrent searching easier on iOS"
+    />
+    <meta name="Description" content="An app that makes torrent searching easier on iOS" />
+    <meta property="og:image" content="https://kingbri.dev/Ferrite.png" />
+    <meta name="theme-color" content="#d47355" />
+    <link rel="icon" type="image/png" href="/Ferrite.png" />
+    <title>Ferrite | Home</title>
   </Fragment>
+  <div class="flex-col relative justify-center flex min-h-screen items-center tracking-wide">
+    <div class="hidden md:block">
+      <Separator />
+    </div>
+    <div class="flex-col text-center">
+      <div class="p-5 lg:p-0">
+        <Image
+          src={ferriteIcon}
+          alt="The Ferrite app icon"
+          class="m-auto rounded-2xl w-32 lg:w-auto h-32 lg:h-auto"
+        />
+      </div>
+
+      <p class="text-whitesmoke font-header text-4xl lg:text-6xl lg:leading-relaxed font-bold tracking-wide">
+        Ferrite
+      </p>
+      <p class="mt-4 font-paragraph text-whitesmoke text-lg lg:text-2xl px-3 lg:px-0">
+        A media searcher and debrid manager for iOS.
+      </p>
+    </div>
+    <div class="mt-8 lg:mt-12 mb-16 inline-flex flex-col justify-center items-center">
+      <a href="https://github.com/kingbri1/Ferrite/releases" target="_blank" rel="noreferrer" class="text-lg lg:text-xl rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border-solid border-2 border-whitesmoke hover:text-black hover:bg-whitesmoke">
+        Download
+      </a>
+      <ul class="mt-12 lg:mt-8 flex items-center">
+        <SocialButtons include={["github", "discord"]} />
+      </ul>
+    </div>
+    <footer class="text-center max-w-screen">
+      &#169; 2024-present kingbri |&nbsp;
+      <span>
+        <a href="ferrite/privacy_policy" class="text-blue-300 underline">
+          Privacy Policy
+        </a>
+      </span>
+    </footer>
+  </div>
 </MainLayout>

@@ -1,11 +1,8 @@
 import { useState } from 'react';
 
 import ManamiPhotoAlbum from './photoAlbum';
-import { GalleryImage } from '../utils/images';
-import dynamic from 'next/dynamic';
-
-// Dynamically import to save on build size
-const ManamiLightbox = dynamic(() => import('@/components/manami/lightbox'));
+import { type GalleryImage } from '../utils/clientImages';
+import ManamiLightbox from './lightbox';
 
 interface Props {
   images: GalleryImage[];
