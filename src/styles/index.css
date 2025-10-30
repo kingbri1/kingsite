@@ -28,6 +28,79 @@
   --leading-spread: 1.75;
 }
 
+@utility prose {
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    @apply self-center leading-none;
+  }
+  & h1,
+  & h2,
+  & h3 {
+    @apply border-whitesmoke border-b-2 border-solid font-bold;
+  }
+  & h1 {
+    @apply text-2xl lg:text-4xl;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+  }
+  & h2 {
+    @apply text-xl lg:text-3xl;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+  }
+  & h3 {
+    @apply text-lg lg:text-2xl;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  & h4 {
+    @apply text-base lg:text-xl;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+  }
+  & h5 {
+    @apply text-base lg:text-lg;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+  }
+  & h6 {
+    @apply text-base lg:text-lg;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+  }
+  & p {
+    @apply not-first:mt-4 not-last:mb-4;
+  }
+  & a {
+    @apply text-blue-300 underline visited:text-purple-400;
+  }
+}
+
+@utility privacy-policy {
+  @apply prose;
+
+  & p,
+  & blockquote {
+    @apply not-last:mb-4 not-first:mt-4;
+  }
+  & ol {
+    @apply list-decimal my-1 pl-10;
+  }
+  & ul {
+    @apply list-disc my-1 pl-10;
+  }
+  & blockquote {
+    @apply ml-5 pl-2 border-l-2 border-gray-400 border-solid;
+  }
+  & li > p {
+    @apply mb-4;
+  }
+}
+
 @layer components {
   html {
     scroll-behavior: smooth;
