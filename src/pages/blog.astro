@@ -1,6 +1,6 @@
 ---
-import SocialButtons from '@/components/utils/socialButtons.astro';
-import MainLayout from '@/layouts/MainLayout.astro';
+import SocialButtons from "@/components/utils/socialButtons.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout>
@@ -10,48 +10,55 @@ import MainLayout from '@/layouts/MainLayout.astro';
     <meta property="og:url" content="https://kingbri.dev/blog" />
     <meta
       property="og:description"
-      content="This is kingbri's personal blog. I post a lot of random things here. All opinions are my own."
+      content="This is kingbri's personal blog. I post a lot of random things here.
+      All opinions are my own."
     />
     <meta
       name="Description"
-      content="This is kingbri's personal blog. I post a lot of random things here. All opinions are my own."
+      content="This is kingbri's personal blog. I post a lot of random things here.
+      All opinions are my own."
     />
     <meta property="og:image" content="https://kingbri.dev/kingbriLogo.png" />
     <meta name="theme-color" content="#ffd700" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Blog</title>
   </Fragment>
-  <div class="flex-col relative justify-center flex min-h-screen items-center tracking-wide">
-    <div class="inline-flex flex-col text-center items-center">
-      <h1 class="text-6xl lg:text-7xl text-yellow-300 font-header text-center p-6">Blog</h1>
-      <h2 class="text-whitesmoke text-center text-2xl md:text-3xl font-header p-3 prose">
+  <div class="relative flex min-h-screen flex-col items-center justify-center tracking-wide">
+    <div class="inline-flex flex-col items-center text-center">
+      <h1 class="font-header p-6 text-center text-6xl text-yellow-300 lg:text-7xl">Blog</h1>
+      <h2 class="text-whitesmoke font-header prose p-3 text-center text-2xl md:text-3xl">
         This page is under construction
       </h2>
-      <p class="text-whitesmoke px-6 lg:px-10 text-md lg:text-lg py-6 font-paragraph tracking-wide leading-relaxed">
-        My blog has moved to{' '}
+      <p
+        class="text-whitesmoke text-md font-paragraph px-6 py-6 leading-relaxed
+        tracking-wide lg:px-10 lg:text-lg"
+      >
+        My blog has moved to{" "}
         <span class="text-blue-300 underline">
           <a
             href="https://twitter.com/kingbri1st"
             class="visited:text-purple-400"
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+          >
             @kingbri1st
           </a>
-        </span>{' '}
-        on Twitter/X and{' '}
+        </span>{" "}
+        on Twitter/X and{" "}
         <span class="text-blue-300 underline">
           <a
             href="https://medium.com/@kingbri"
             class="visited:text-purple-400"
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+          >
             @kingbri
           </a>
-        </span>{' '}
+        </span>{" "}
         on Medium.
         <br />
       </p>
-      <ul class="mt-4 lg:mt-6 flex items-center">
+      <ul class="mt-4 flex items-center lg:mt-6">
         <SocialButtons include={["twitter", "medium"]} />
       </ul>
     </div>

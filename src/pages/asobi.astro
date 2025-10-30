@@ -1,9 +1,9 @@
 ---
 import asobiIcon from "@public/Asobi.png";
 import downloadAppStoreLogo from "@/assets/DownloadAppStore.svg";
-import Separator from '@/components/utils/separator.astro';
-import SocialButtons from '@/components/utils/socialButtons.astro';
-import MainLayout from '@/layouts/MainLayout.astro';
+import Separator from "@/components/utils/separator.astro";
+import SocialButtons from "@/components/utils/socialButtons.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -19,7 +19,7 @@ import { Image } from "astro:assets";
     <link rel="icon" type="image/png" href="/Asobi.png" />
     <title>Asobi | Home</title>
   </Fragment>
-  <div class="flex-col relative justify-center flex min-h-screen items-center tracking-wide">
+  <div class="relative flex min-h-screen flex-col items-center justify-center tracking-wide">
     <div class="hidden md:block">
       <Separator />
     </div>
@@ -28,41 +28,47 @@ import { Image } from "astro:assets";
         <Image
           src={asobiIcon}
           alt="The Asobi app icon"
-          class="m-auto rounded-2xl w-32 lg:w-auto h-32 lg:h-auto"
+          class="m-auto h-32 w-32 rounded-2xl lg:h-auto lg:w-auto"
         />
       </div>
 
-      <p class="text-whitesmoke font-header text-4xl lg:text-6xl lg:leading-relaxed font-bold tracking-wide">
+      <p
+        class="text-whitesmoke font-header text-4xl font-bold tracking-wide
+        lg:text-6xl lg:leading-relaxed"
+      >
         Asobi
       </p>
-      <p class="mt-4 font-paragraph text-whitesmoke text-lg lg:text-2xl">
+      <p class="font-paragraph text-whitesmoke mt-4 text-lg lg:text-2xl">
         An immersive browser for iOS, iPadOS, and Macs.
       </p>
     </div>
-    <div class="mt-12 mb-16 inline-flex flex-col justify-center items-center">
+    <div class="mt-12 mb-16 inline-flex flex-col items-center justify-center">
       <a
         href="https://apps.apple.com/us/app/asobi/id1589812837"
         target="_blank"
-        rel="noreferrer noopener">
+        rel="noreferrer noopener"
+      >
         <Image
           src={downloadAppStoreLogo}
           alt="Download on the app store"
-          class="h-12 lg:h-16 w-screen"
+          class="h-12 w-screen lg:h-16"
         />
       </a>
-      <a href="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" class="border-solid border-2 mt-8 text-lg border-white p-2 rounded-md cursor-pointer hover:bg-white hover:text-black duration-200">
+      <a
+        href="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        class="mt-8 cursor-pointer rounded-md border-2 border-solid border-white p-2
+        text-lg duration-200 hover:bg-white hover:text-black"
+      >
         Test audio playback
       </a>
-      <ul class="mt-4 lg:mt-6 flex items-center">
+      <ul class="mt-4 flex items-center lg:mt-6">
         <SocialButtons include={["github", "discord"]} />
       </ul>
     </div>
-    <footer class="text-center max-w-screen">
+    <footer class="max-w-screen text-center">
       &#169; 2021-present kingbri |&nbsp;
       <span>
-        <a href="asobi/privacy_policy" class="text-blue-300 underline">
-          Privacy Policy
-        </a>
+        <a href="asobi/privacy_policy" class="text-blue-300 underline">Privacy Policy</a>
       </span>
     </footer>
   </div>

@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import ManamiPhotoAlbum from './photoAlbum';
-import { type GalleryImage } from '../utils/clientImages';
-import ManamiLightbox from './lightbox';
+import ManamiPhotoAlbum from "./photoAlbum";
+import { type GalleryImage } from "../utils/clientImages";
+import ManamiLightbox from "./lightbox";
 
 interface Props {
   images: GalleryImage[];

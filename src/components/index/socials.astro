@@ -1,6 +1,6 @@
 ---
-import SocialButtons from '../utils/socialButtons.astro'
-import type { SocialName } from '../utils/socialUtils'
+import SocialButtons from "../utils/socialButtons.astro";
+import type { SocialName } from "../utils/socialUtils";
 
 interface Props {
   include?: readonly SocialName[];
@@ -11,11 +11,11 @@ const { include } = Astro.props;
 
 <footer id="socials" class="flex justify-center p-8">
   <div class="inline-flex flex-col justify-center">
-    <h1 class="text-yellow-300 text-3xl lg:text-4xl text-center font-header font-semibold">
+    <h1 class="font-header text-center text-3xl font-semibold text-yellow-300 lg:text-4xl">
       Social Links
     </h1>
 
-    <ul class="py-10 flex items-center">
+    <ul class="flex items-center py-10">
       <SocialButtons include={include} />
     </ul>
   </div>

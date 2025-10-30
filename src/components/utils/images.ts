@@ -1,19 +1,22 @@
-import ExifReader from 'exifreader';
-import fs from 'fs';
-import { getImage } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
-import type { GalleryArtistInfo, GalleryImage } from './clientImages';
+import ExifReader from "exifreader";
+import fs from "fs";
+import { getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import type { GalleryArtistInfo, GalleryImage } from "./clientImages";
 
 export async function getImagesFromAssets(folderPath: string) {
-  const assets = import.meta.glob<ImageMetadata>("/src/assets/**/*", { eager: true, import: "default" });
+  const assets = import.meta.glob<ImageMetadata>("/src/assets/**/*", {
+    eager: true,
+    import: "default",
+  });
 
   // This doesn't look too optimized, maybe make a collections enum or separate functions instead
-  const imageModules = Object.entries(assets).filter(([filePath]) => 
+  const imageModules = Object.entries(assets).filter(([filePath]) =>
     filePath.includes(`/src/assets/${folderPath}/`)
   );
 
   const imagePromises = imageModules.map(async ([filePath, imageModule]) => {
-    const relPath = filePath.replace(/^\//, '');
+    const relPath = filePath.replace(/^\//, "");
     const fileBuffer = fs.readFileSync(relPath);
     const metadata = ExifReader.load(fileBuffer);
 
@@ -37,7 +40,7 @@ export async function getImagesFromAssets(folderPath: string) {
       width: imageModule.width,
       height: imageModule.height,
       title: artistInfo?.title ?? null,
-      artist: artistInfo ?? null
+      artist: artistInfo ?? null,
     };
   });
 

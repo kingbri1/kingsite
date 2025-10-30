@@ -2,61 +2,75 @@
 const projects = [
   {
     name: "TabbyAPI",
-    description:
-      "A friendly local LLM server that follows the OpenAI API standard and uses the ExllamaV2 library.",
-    url: "https://github.com/theroyallab/tabbyAPI"
+    description: `A friendly local LLM server that follows the OpenAI API standard 
+      and uses the ExllamaV2 library.`,
+    url: "https://github.com/theroyallab/tabbyAPI",
   },
   {
     name: "YALS",
-    description:
-      "TabbyAPI's sister project. OAI compatible friendly local LLM server built with Deno and the llama.cpp library.",
-    url: "https://github.com/theroyallab/YALS"
+    description: `TabbyAPI's sister project. OAI compatible friendly local LLM server built 
+      with Deno and the llama.cpp library.`,
+    url: "https://github.com/theroyallab/YALS",
   },
   {
     name: "Ferrite",
     description: "A torrent searcher and debrid streamer for iOS. Available on TestFlight.",
-    url: "/ferrite"
+    url: "/ferrite",
   },
   {
     name: "Asobi",
     description: "An immersive web browser for iOS, iPadOS,and MacOS. Available on the App Store.",
-    url: "/asobi"
+    url: "/asobi",
   },
   {
     name: "FileBridge",
-    description:
-      "An iOS application which bridges the gap between your iDevice and iTunes. Available on the App Store.",
-    url: "/filebridge"
+    description: `An iOS application which bridges the gap between your iDevice and iTunes. 
+      Available on the App Store.`,
+    url: "/filebridge",
   },
   {
     name: "RoyalGuard",
     description: "Makes your discord administration experience simple and easy.",
-    url: "https://github.com/kingbri1/RoyalGuard"
-  }
-]
+    url: "https://github.com/kingbri1/RoyalGuard",
+  },
+];
 ---
 
-<div class="flex flex-col min-h-screen grow overflow-visible">
-  <h1 class="text-yellow-300 text-center text-4xl md:text-5xl lg:text-6xl leading-normal lg:leading-spread font-header font-semibold tracking-wide p-3">
+<div class="flex min-h-screen grow flex-col overflow-visible">
+  <h1
+    class="lg:leading-spread font-header p-3 text-center text-4xl leading-normal
+    font-semibold tracking-wide text-yellow-300 md:text-5xl lg:text-6xl"
+  >
     My Work
   </h1>
   <div class="inline-flex flex-row flex-wrap justify-center">
-    {projects.map(({ name, description, url }) => (
-      <div class="work-card bg-lightbg p-5 m-8 max-w-[75vw] min-h-[30vh] md:max-w-[40vw] md:min-h-[25vh] lg:max-w-[25vw] lg:min-h-[35vh] lg:max-h-[45vh]">
-        <h2 class="relative underline text-2xl lg:text-3xl">{name}</h2>
-        <p class="relative inline-flex grow align-center text-md mt-4 mb-4 lg:text-xl font-paragraph">
-          {description}
-        </p>
-        <div class="inline-flex bottom-4">
-          <a
-            href={url}
-            target="_blank"
-            rel="noreferrer noopener"
-            class="text-md lg:text-lg rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border-solid border-2 border-whitesmoke hover:text-black hover:bg-whitesmoke">
-            {url.startsWith("https://github.com") ? "View source code" : "View source"}
-          </a>
+    {
+      projects.map(({ name, description, url }) => (
+        <div
+          class="work-card bg-lightbg m-8 min-h-[30vh] max-w-[75vw] p-5 md:min-h-[25vh]
+        md:max-w-[40vw] lg:max-h-[45vh] lg:min-h-[35vh] lg:max-w-[25vw]"
+        >
+          <h2 class="relative text-2xl underline lg:text-3xl">{name}</h2>
+          <p
+            class="align-center text-md font-paragraph relative mt-4 mb-4 inline-flex grow
+          lg:text-xl"
+          >
+            {description}
+          </p>
+          <div class="bottom-4 inline-flex">
+            <a
+              href={url}
+              target="_blank"
+              rel="noreferrer noopener"
+              class="text-md text-whitesmoke border-whitesmoke hover:bg-whitesmoke
+              rounded-md border-2 border-solid px-3 py-1 duration-500 hover:text-black
+              lg:py-2 lg:text-lg"
+            >
+              {url.startsWith("https://github.com") ? "View source code" : "View source"}
+            </a>
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </div>

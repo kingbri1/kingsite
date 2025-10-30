@@ -10,22 +10,24 @@ interface Props {
   url: string;
 }
 
-const {
-    name,
-    altName,
-    url
-} = Astro.props;
+const { name, altName, url } = Astro.props;
 ---
 
 <li>
-  <a href={url} class="focus:outline-none relative text-whitesmoke list-button font-navigation text-center text-xl lg:text-2xl tracking-wide">
-    {altName ? (
+  <a
+    href={url}
+    class="text-whitesmoke list-button font-navigation relative text-center text-xl
+    tracking-wide focus:outline-none lg:text-2xl"
+  >
+    {
+      altName ? (
         <>
-        <span class="hidden md:inline-block">{name}</span>
-        <span class="md:hidden">{altName}</span>
+          <span class="hidden md:inline-block">{name}</span>
+          <span class="md:hidden">{altName}</span>
         </>
-    ) : (
+      ) : (
         <span class="inline-block">{name}</span>
-    )}
+      )
+    }
   </a>
 </li>

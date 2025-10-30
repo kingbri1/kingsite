@@ -1,8 +1,7 @@
-@import './tailwind-base.css' layer(components);
+@import "./tailwind-base.css" layer(components);
 /* Custom classes here */
-@import 'tailwindcss/utilities' layer(utilities);
+@import "tailwindcss/utilities" layer(utilities);
 
-/* @config '../../tailwind.config.js'; */
 @plugin "@iconify/tailwind4";
 
 @custom-variant dark (@media (prefers-color-scheme: dark));
@@ -72,7 +71,7 @@
   .list-button:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 5px;
-    content: '';
+    content: "";
     display: block;
     height: 2px;
     left: 50%;

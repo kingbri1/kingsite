@@ -1,5 +1,5 @@
 ---
-import MainLayout from '@/layouts/MainLayout.astro';
+import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout>
@@ -7,22 +7,20 @@ import MainLayout from '@/layouts/MainLayout.astro';
     <head slot="header">
       <title>404</title>
     </head>
-    <div class="flex flex-col min-h-screen justify-center">
-      <div class="inline-flex grow lg:grow-0 flex-col text-center justify-center">
+    <div class="flex min-h-screen flex-col justify-center">
+      <div class="inline-flex grow flex-col justify-center text-center lg:grow-0">
         <!-- <h1 class="font-header text-yellow-300 text-7xl mb-12">404.</h1> -->
-        <img
-          src="https://http.cat/404"
-          class="w-xs self-center mb-12"
-          alt=""
-        />
-        <h2 class="font-navigation font-bold text-3xl lg:text-5xl mb-12">
+        <img src="https://http.cat/404" class="mb-12 w-xs self-center" alt="" />
+        <h2 class="font-navigation mb-12 text-3xl font-bold lg:text-5xl">
           Looks like that page couldn&apos;t be found.
         </h2>
       </div>
-      <div class="self-center mb-8 lg:mb-0">
+      <div class="mb-8 self-center lg:mb-0">
         <button
           id="back-button"
-          class="mt-auto border-solid border-2 border-whitesmoke rounded-xl p-3 font-bold font-navigation text-3xl hover:text-black hover:bg-whitesmoke duration-200"
+          class="border-whitesmoke font-navigation hover:bg-whitesmoke mt-auto
+          rounded-xl border-2 border-solid p-3 text-3xl font-bold duration-200
+          hover:text-black"
         >
           Take me back!
         </button>
@@ -32,7 +30,7 @@ import MainLayout from '@/layouts/MainLayout.astro';
 </MainLayout>
 
 <script>
-  document.getElementById('back-button')?.addEventListener('click', () => {
+  document.getElementById("back-button")?.addEventListener("click", () => {
     window.history.back();
-  })
+  });
 </script>

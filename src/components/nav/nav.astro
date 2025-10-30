@@ -2,12 +2,18 @@
 // All parts except the Image and configuration drop downs use the NavElement function
 
 import { Image } from "astro:assets";
-import crownLogo from '@public/favicon.svg';
+import crownLogo from "@public/favicon.svg";
 import NavElement from "./navElement.astro";
 ---
 
-<nav class="flex fixed w-full bottom-0 md:top-0 bg-lightbg pt-4 md:pt-0 pb-safe md:pb-4 lg:pb-0 z-10 shadow-drop h-14 md:h-16 lg:h-20 xl:px-40">
-  <ul class="grid grid-cols-4 md:grid-cols-5 grow items-center justify-items-center lg:mx-20 list-none">
+<nav
+  class="bg-lightbg pb-safe shadow-drop fixed bottom-0 z-10 flex h-14 w-full pt-4 md:top-0
+  md:h-16 md:pt-0 md:pb-4 lg:h-20 lg:pb-0 xl:px-40"
+>
+  <ul
+    class="grid grow list-none grid-cols-4 items-center justify-items-center md:grid-cols-5
+    lg:mx-20"
+  >
     <div class="md:hidden">
       <NavElement name="Home" url="/" />
     </div>
@@ -17,13 +23,7 @@ import NavElement from "./navElement.astro";
     <NavElement name="My Work" altName="Work" url="/#work" />
     <li id="navHome" class="hidden md:inline-block">
       <a href="/">
-        <Image
-          src={crownLogo}
-          width={65}
-          height={65}
-          class="mx-auto cursor-pointer"
-          alt=""
-        />
+        <Image src={crownLogo} width={65} height={65} class="mx-auto cursor-pointer" alt="" />
       </a>
     </li>
     <NavElement name="Resources" altName="Files" url="https://files.kingbri.dev" />

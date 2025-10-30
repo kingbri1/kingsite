@@ -1,5 +1,5 @@
-@import 'tailwindcss/theme' layer(theme);
-@import 'tailwindcss/preflight' layer(base);
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/preflight" layer(base);
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
@@ -31,7 +31,7 @@
   .prose h1,
   .prose h2,
   .prose h3 {
-    @apply border-b-2 border-solid border-whitesmoke font-bold;
+    @apply border-whitesmoke border-b-2 border-solid font-bold;
   }
   .prose h1 {
     @apply text-2xl lg:text-4xl;
@@ -64,9 +64,9 @@
     margin-bottom: 2.33em;
   }
   .prose p {
-    @apply not-last:mb-4 not-first:mt-4;
+    @apply not-first:mt-4 not-last:mb-4;
   }
   .prose a {
-    @apply underline text-blue-300 visited:text-purple-400;
+    @apply text-blue-300 underline visited:text-purple-400;
   }
 }
