@@ -1,6 +1,4 @@
-@import "./tailwind-base.css" layer(components);
-/* Custom classes here */
-@import "tailwindcss/utilities" layer(utilities);
+@import "tailwindcss";
 
 @plugin "@iconify/tailwind4";
 
