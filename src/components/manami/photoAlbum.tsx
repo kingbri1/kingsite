@@ -1,5 +1,4 @@
-import type { Photo } from "react-photo-album";
-import { ColumnsPhotoAlbum } from "react-photo-album";
+import { type Photo, ColumnsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/columns.css";
 
 import { type GalleryImage } from "../utils/clientImages";

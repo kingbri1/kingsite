@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
+import manamiPortrait from "@public/Manami/portrait.png";
 import ManamiGallery from "@/components/manami/gallery";
 import LoreDescriptor from "@/components/manami/loreDescriptor.astro";
 import { getImagesFromAssets } from "@/components/utils/images";
 import Separator from "@/components/utils/separator.astro";
-import MainLayout from "@/layouts/MainLayout.astro";
-import manamiPortrait from "@public/Manami/portrait.png";
 import SocialButtons from "@/components/utils/socialButtons.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 
 const images = await getImagesFromAssets("Manami/Art");
 ---
