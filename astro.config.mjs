@@ -15,4 +15,11 @@ export default defineConfig({
 
   integrations: [react()],
   adapter: netlify(),
+  redirects: {
+    "/discord": "https://discord.gg/sYQxnuD7Fj",
+    "/about": "/#about",
+    "/work": "/#work",
+    "/socials": "/#socials",
+    "/Manami": "/manami",
+  }
 });
