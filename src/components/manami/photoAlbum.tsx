@@ -10,7 +10,7 @@ interface Props {
 
 export default function ManamiPhotoAlbum({ images, onPhotoClick }: Props) {
   return (
-    <div className="lg:max-h-[75vh] overflow-scroll">
+    <div className="overflow-scroll lg:max-h-[75vh]">
       <ColumnsPhotoAlbum
         columns={(containerWidth) => (containerWidth < 640 ? 1 : 2)}
         photos={images.map((image): Photo => {
