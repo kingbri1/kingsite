@@ -19,7 +19,6 @@ export default defineConfig({
     "/discord": "https://discord.gg/sYQxnuD7Fj",
     "/about": "/#about",
     "/work": "/#work",
-    "/socials": "/#socials",
-    "/Manami": "/manami",
+    "/socials": "/#socials"
   }
 });
