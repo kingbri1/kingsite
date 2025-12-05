@@ -15,9 +15,10 @@ export async function getImagesFromAssets(folderPath: string) {
     filePath.includes(`/src/assets/${folderPath}/`)
   );
 
-  const imagePromises = imageModules.map(async ([filePath, imageModule]) => {
+  const imagePromises = imageModules.map(async ([filePath, imageModule]): Promise<GalleryImage> => {
     const relPath = filePath.replace(/^\//, "");
     const fileBuffer = fs.readFileSync(relPath);
+    const isAnimated = fileBuffer.includes(Buffer.from("acTL"));
     const metadata = ExifReader.load(fileBuffer);
 
     let artistInfo: GalleryArtistInfo | undefined;
@@ -32,15 +33,15 @@ export async function getImagesFromAssets(folderPath: string) {
 
     const imageResult = await getImage({
       src: imageModule,
-      format: "png",
     });
 
     return {
-      src: imageResult.src,
+      src: isAnimated ? imageModule.src : imageResult.src,
       width: imageModule.width,
       height: imageModule.height,
       title: artistInfo?.title ?? null,
       artist: artistInfo ?? null,
+      thumbnail: imageResult.src,
     };
   });
 

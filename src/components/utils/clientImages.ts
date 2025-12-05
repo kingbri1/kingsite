@@ -4,6 +4,7 @@ export interface GalleryImage {
   height: number;
   title: string | null;
   artist: GalleryArtistInfo | null;
+  thumbnail: string;
 }
 
 export interface GalleryArtistInfo {
