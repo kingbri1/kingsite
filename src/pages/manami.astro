@@ -7,8 +7,10 @@ import { getImagesFromAssets } from "@/components/utils/images";
 import Separator from "@/components/utils/separator.astro";
 import SocialButtons from "@/components/utils/socialButtons.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
+import ManamiRefCarousel from "@/components/manami/refCarousel";
 
 const images = await getImagesFromAssets("Manami/Art");
+const refSheet = await getImagesFromAssets("Manami/RefSheet");
 ---
 
 <MainLayout>
@@ -63,7 +65,9 @@ const images = await getImagesFromAssets("Manami/Art");
           Manami is a quantum physics student and robotics expert in the year 2077, dedicated to
           study the secrets of the universe.
         </p>
-        <h2 class="text-blue-300">Content</h2>
+        <h2 class="text-blue-300" id="refsheet">Reference Sheet</h2>
+        <ManamiRefCarousel images={refSheet} client:load />
+        <h2 class="text-blue-300" id="stream">Content</h2>
         <LoreDescriptor
           title="Streaming schedule"
           text="Fridays or Saturdays @ 9PM EST on Twitch"
@@ -72,7 +76,7 @@ const images = await getImagesFromAssets("Manami/Art");
           title="Content categories"
           text="Development, Articles, Medical education, Games, Collabs"
         />
-        <h2 class="text-blue-300">Demographics</h2>
+        <h2 class="text-blue-300" id="lore">Demographics</h2>
         <LoreDescriptor title="Age" text="21 years old" />
         <LoreDescriptor title="Birthday" text="December 24th" />
         <LoreDescriptor title="Height" text={`5' 6"`} />
@@ -124,6 +128,7 @@ const images = await getImagesFromAssets("Manami/Art");
           air and contains amenities such as a jogging trail, sport courts, and a picnic area
           with a central fountain.`}
         />
+        <h2 class="text-blue-300" id="gallery">Gallery</h2>
         <ManamiGallery images={images} client:load />
       </div>
     </div>

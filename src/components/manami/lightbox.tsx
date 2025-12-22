@@ -12,7 +12,9 @@ import type { GalleryArtistInfo, GalleryImage } from "../utils/clientImages";
 interface Props {
   images: GalleryImage[];
   index: number;
+  open: boolean;
   onClose: () => void;
+  onView?: () => void;
 }
 
 function getDescription(artistInfo: GalleryArtistInfo): ReactNode {
@@ -35,7 +37,7 @@ function getDescription(artistInfo: GalleryArtistInfo): ReactNode {
   );
 }
 
-export default function ManamiLightbox({ images, index, onClose }: Props) {
+export default function ManamiLightbox({ images, index, open, onClose, onView }: Props) {
   return (
     <Lightbox
       slides={images.map(({ src, title, artist }): SlideImage => {
@@ -48,7 +50,10 @@ export default function ManamiLightbox({ images, index, onClose }: Props) {
       carousel={{
         padding: "64px",
       }}
-      open={index >= 0}
+      on={{
+        view: onView,
+      }}
+      open={open}
       index={index}
       close={onClose}
       plugins={[Fullscreen, Zoom, Captions, Download]}

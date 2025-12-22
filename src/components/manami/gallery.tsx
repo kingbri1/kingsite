@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { type GalleryImage } from "@/components/utils/clientImages";
-import ManamiPhotoAlbum from "./photoAlbum";
+import { ColumnsPhotoAlbum, type Photo } from "react-photo-album";
+import "react-photo-album/columns.css";
 import ManamiLightbox from "./lightbox";
 
 interface Props {
@@ -12,9 +13,26 @@ export default function ManamiGallery({ images }: Props) {
 
   return (
     <>
-      <h2 className="text-blue-300">Gallery</h2>
-      <ManamiPhotoAlbum images={images} onPhotoClick={setIndex} />
-      <ManamiLightbox images={images} index={index} onClose={() => setIndex(-1)} />
+      <div className="overflow-scroll lg:max-h-[75vh]">
+        <ColumnsPhotoAlbum
+          columns={(containerWidth) => (containerWidth < 640 ? 1 : 2)}
+          photos={images.map((image): Photo => {
+            return {
+              src: image.src,
+              width: image.width,
+              height: image.height,
+              alt: image.title || undefined,
+            };
+          })}
+          onClick={({ index }) => setIndex(index)}
+        />
+      </div>
+      <ManamiLightbox
+        images={images}
+        index={index}
+        open={index >= 0}
+        onClose={() => setIndex(-1)}
+      />
     </>
   );
 }

@@ -2,7 +2,7 @@ import ExifReader from "exifreader";
 import fs from "fs";
 import { getImage } from "astro:assets";
 import type { ImageMetadata } from "astro";
-import type { GalleryArtistInfo, GalleryImage } from "./clientImages";
+import type { GalleryArtistInfo } from "./clientImages";
 
 export async function getImagesFromAssets(folderPath: string) {
   const assets = import.meta.glob<ImageMetadata>("/src/assets/**/*", {
