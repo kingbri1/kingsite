@@ -8,6 +8,7 @@ import Separator from "@/components/utils/separator.astro";
 import SocialButtons from "@/components/utils/socialButtons.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import ManamiRefCarousel from "@/components/manami/refCarousel";
+import LinkButton from "@/components/utils/linkButton.astro";
 
 const images = await getImagesFromAssets("Manami/Art");
 const refSheet = await getImagesFromAssets("Manami/RefSheet");
@@ -37,7 +38,7 @@ const refSheet = await getImagesFromAssets("Manami/RefSheet");
     <div class="hidden md:block">
       <Separator />
     </div>
-    <div class="filebridge-privacy flex flex-col items-center">
+    <div class="flex flex-col items-center">
       <h1
         class="font-header bg-linear-to-r from-blue-300 via-indigo-400 to-purple-300
         bg-clip-text p-8 text-center text-4xl text-transparent md:text-5xl lg:text-7xl"
@@ -60,6 +61,13 @@ const refSheet = await getImagesFromAssets("Manami/RefSheet");
             <SocialButtons include={["twitch", "youtube", "tiktok", "twitter", "discord"]} />
           </ul>
         </div>
+        <h2 class="text-blue-300">Table of Contents</h2>
+        <div class="flex justify-center gap-4">
+          <LinkButton href="/manami/#refsheet">References</LinkButton>
+          <LinkButton href="/manami/#stream">Stream</LinkButton>
+          <LinkButton href="/manami/#lore">Lore</LinkButton>
+          <LinkButton href="/manami/#gallery">Gallery</LinkButton>
+        </div>
         <h2 class="text-blue-300">Overview</h2>
         <p>
           Manami is a quantum physics student and robotics expert in the year 2077, dedicated to
@@ -68,66 +76,53 @@ const refSheet = await getImagesFromAssets("Manami/RefSheet");
         <h2 class="text-blue-300" id="refsheet">Reference Sheet</h2>
         <ManamiRefCarousel images={refSheet} client:load />
         <h2 class="text-blue-300" id="stream">Content</h2>
-        <LoreDescriptor
-          title="Streaming schedule"
-          text="Fridays or Saturdays @ 9PM EST on Twitch"
-        />
-        <LoreDescriptor
-          title="Content categories"
-          text="Development, Articles, Medical education, Games, Collabs"
-        />
+        <LoreDescriptor title="Streaming schedule">
+          Fridays or Saturdays @ 9PM EST on Twitch
+        </LoreDescriptor>
+        <LoreDescriptor title="Content categories">
+          Development, Articles, Medical education, Games, Collabs
+        </LoreDescriptor>
         <h2 class="text-blue-300" id="lore">Demographics</h2>
-        <LoreDescriptor title="Age" text="21 years old" />
-        <LoreDescriptor title="Birthday" text="December 24th" />
-        <LoreDescriptor title="Height" text={`5' 6"`} />
-        <LoreDescriptor title="Weight" text="Hey! You know you shouldn't ask for that..." />
+        <LoreDescriptor title="Age">21 years old</LoreDescriptor>
+        <LoreDescriptor title="Birthday">December 24th</LoreDescriptor>
+        <LoreDescriptor title="Height">5' 6"</LoreDescriptor>
+        <LoreDescriptor title="Weight">Hey! You know you shouldn't ask for that...</LoreDescriptor>
         <h2 class="text-blue-300">Background</h2>
-        <LoreDescriptor title="Career" text="University student at BDIT" />
-        <LoreDescriptor title="Major" text="Quantum physics" />
-        <LoreDescriptor title="Life goal" text="To understand the secrets of the universe" />
-        <LoreDescriptor
-          title="Clubs"
-          text={`Robotics club president, Goalie on BDIT soccer team, ghost member
-          of anime club`}
-        />
-        <LoreDescriptor
-          title="Hobbies"
-          text="Tinkering/creating machines, anime, video games, manga, sports"
-        />
-        <LoreDescriptor
-          title="Traits"
-          text="tomboy, athletic, intelligent, caring, dreamer, kind, honest, lively, selfless"
-        />
-        <LoreDescriptor
-          title="Flaws"
-          text={`has an inferiority complex, doubts her intelligence, makes 
-          shallow friendships
-          and only respects a few friends`}
-        />
+        <LoreDescriptor title="Career">University student at BDIT</LoreDescriptor>
+        <LoreDescriptor title="Major">Quantum physics</LoreDescriptor>
+        <LoreDescriptor title="Life goal">To understand the secrets of the universe</LoreDescriptor>
+        <LoreDescriptor title="Clubs"
+          >Robotics club president, Goalie on BDIT soccer team, ghost member of anime club</LoreDescriptor
+        >
+        <LoreDescriptor title="Hobbies">
+          Tinkering/creating machines, anime, video games, manga, sports
+        </LoreDescriptor>
+        <LoreDescriptor title="Traits">
+          tomboy, athletic, intelligent, caring, dreamer, kind, honest, lively, selfless
+        </LoreDescriptor>
+        <LoreDescriptor title="Flaws">
+          has an inferiority complex, doubts her intelligence, makes shallow friendships and only
+          respects a few friends
+        </LoreDescriptor>
         <h2 class="text-blue-300">Bluudale</h2>
-        <LoreDescriptor
-          title="Description"
-          text={`A technologically advanced metropolis with holographic skyscrapers,
-          solar energy, mag-lev transport, and citizens that use AR enhanced glasses to
-          interact with their surroundings.`}
-        />
-        <LoreDescriptor
-          title="BDIT"
-          text={`Short for Bluudale Institute of Technology. A prestigious university renowned
-          for its engineering and physics programs. Serves as an insitution to further the
-          world's knowledge of science and technology.`}
-        />
-        <LoreDescriptor
-          title="Brew Haven"
-          text={`A frequent stop for Bluudale denizens, Brew Haven serves seasonal coffee blends
-          and unique pastries.`}
-        />
-        <LoreDescriptor
-          title="Bluudale Park"
-          text={`Located in the heart of Bluudale, the park is full of trees for fresh
-          air and contains amenities such as a jogging trail, sport courts, and a picnic area
-          with a central fountain.`}
-        />
+        <LoreDescriptor title="Description">
+          A technologically advanced metropolis with holographic skyscrapers, solar energy, mag-lev
+          transport, and citizens that use AR enhanced glasses to interact with their surroundings.
+        </LoreDescriptor>
+        <LoreDescriptor title="BDIT">
+          Short for Bluudale Institute of Technology. A prestigious university renowned for its
+          engineering and physics programs. Serves as an insitution to further the world's knowledge
+          of science and technology.
+        </LoreDescriptor>
+        <LoreDescriptor title="Brew Haven">
+          A frequent stop for Bluudale denizens, Brew Haven serves seasonal coffee blends and unique
+          pastries.
+        </LoreDescriptor>
+        <LoreDescriptor title="Bluudale Park">
+          Located in the heart of Bluudale, the park is full of trees for fresh air and contains
+          amenities such as a jogging trail, sport courts, and a picnic area with a central
+          fountain.
+        </LoreDescriptor>
         <h2 class="text-blue-300" id="gallery">Gallery</h2>
         <ManamiGallery images={images} client:load />
       </div>

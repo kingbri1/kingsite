@@ -71,10 +71,7 @@
     margin-bottom: 2.33em;
   }
   & p {
-    @apply not-first:mt-4 not-last:mb-4;
-  }
-  & a {
-    @apply text-blue-300 underline visited:text-purple-400;
+    @apply text-lg not-first:mt-4 not-last:mb-4 lg:text-xl;
   }
 }
 
@@ -96,6 +93,9 @@
   }
   & li > p {
     @apply mb-4;
+  }
+  & a {
+    @apply text-blue-300 underline visited:text-purple-400;
   }
 }
 
@@ -191,10 +191,6 @@
 
   .spacing-m {
     border-spacing: 0 5rem;
-  }
-
-  .filebridge-privacy p {
-    @apply text-lg lg:text-xl;
   }
 
   .pb-safe {

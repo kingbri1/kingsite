@@ -1,13 +1,12 @@
 ---
 interface Props {
   title: string;
-  text: string;
 }
 
-const { title, text } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <p>
   <span class="font-semibold text-indigo-300">{title}:</span>
-  {text}
+  <slot />
 </p>
