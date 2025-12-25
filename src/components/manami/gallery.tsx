@@ -18,7 +18,7 @@ export default function ManamiGallery({ images }: Props) {
           columns={(containerWidth) => (containerWidth < 640 ? 1 : 2)}
           photos={images.map((image): Photo => {
             return {
-              src: image.src,
+              src: image.thumbnail,
               width: image.width,
               height: image.height,
               alt: image.title || undefined,
