@@ -14,7 +14,13 @@ export default defineConfig({
   },
 
   integrations: [react()],
-  adapter: netlify(),
+  adapter: netlify({
+    devFeatures: {
+      environmentVariables: false,
+      images: true,
+      edgeFunctions: false
+    }
+  }),
   redirects: {
     "/discord": "https://discord.gg/sYQxnuD7Fj",
     "/about": "/#about",
