@@ -1,0 +1,40 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "includes": ["**", "!!**/dist"]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 100,
+    "useEditorconfig": true,
+    "includes": [
+      "**",
+      "!**/.astro/",
+      "!**/npm-debug.log*",
+      "!**/yarn-debug.log*",
+      "!**/yarn-error.log*",
+      "!**/pnpm-debug.log*",
+      "!**/.env",
+      "!**/.env.production",
+      "!**/.DS_Store",
+      "!**/.idea/",
+      "!**/pnpm-lock.yaml"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "trailingCommas": "es5"
+    }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true,
+    "formatter": {
+      "selfCloseVoidElements": "always"
+    }
+  }
+}

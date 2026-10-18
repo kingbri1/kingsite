@@ -2,4 +2,6 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   exifreader: true
+  netlify-cli: true
   sharp: true
+  unix-dgram: true
