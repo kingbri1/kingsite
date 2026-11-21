@@ -1,9 +1,9 @@
 // @ts-check
 
-import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,8 +18,8 @@ export default defineConfig({
     devFeatures: {
       environmentVariables: false,
       images: true,
-      edgeFunctions: false
-    }
+      edgeFunctions: false,
+    },
   }),
   redirects: {
     "/discord": "https://discord.gg/sYQxnuD7Fj",

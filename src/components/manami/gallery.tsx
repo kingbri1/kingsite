@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { type GalleryImage } from "@/components/utils/clientImages";
 import { ColumnsPhotoAlbum, type Photo } from "react-photo-album";
+import type { GalleryImage } from "@/components/utils/clientImages";
 import "react-photo-album/columns.css";
 import ManamiLightbox from "./lightbox";
 

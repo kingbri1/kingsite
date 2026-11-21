@@ -26,6 +26,11 @@
       "!**/pnpm-lock.yaml"
     ]
   },
+  "linter": {
+    "rules": {
+      "a11y": "off"
+    }
+  },
   "javascript": {
     "formatter": {
       "trailingCommas": "es5"
@@ -36,5 +41,20 @@
     "formatter": {
       "selfCloseVoidElements": "always"
     }
-  }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.ts", "**/*.js"],
+      "javascript": {
+        "formatter": {
+          "indentWidth": 4
+        }
+      }
+    }
+  ]
 }
